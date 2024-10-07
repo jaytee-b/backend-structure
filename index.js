@@ -84,6 +84,9 @@ const userRoute = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes")
 
+app.use("/",(req, res)=>{
+    res.send("server is working")
+})
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoutes);
 app.use("/api/order", orderRoutes);
